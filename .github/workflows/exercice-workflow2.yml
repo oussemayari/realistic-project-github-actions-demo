@@ -7,4 +7,4 @@ jobs:
             - name: GET REPO
               uses: actions/checkout@v2
             - name: LOG EVENT
-              run: echo "An issue event has occurred. ${{github.event.issue.user.name}}"
+              run: echo "An issue event has occurred. ${{toJson(github.event)}}"
