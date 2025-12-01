@@ -1,0 +1,18 @@
+name: mywf
+on: push
+jobs:
+    firstjob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: GET REPO
+              uses: actions/checkout@v2
+            - name: second step
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: INSTALL DEPENDENCIES
+              run: npm ci
+            - name: TEST PROJECT
+              run: npm test 
+            
+
