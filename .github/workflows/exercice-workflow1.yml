@@ -13,9 +13,7 @@ jobs:
         - name: install dependencies
           run: npm ci
         - name: run linter
-          run: |
-            npm install eslint --save-dev
-            npm run lint
+          run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
