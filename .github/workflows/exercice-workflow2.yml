@@ -1,0 +1,10 @@
+name: workflow2
+on: issues
+jobs:
+    eventjob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: GET REPO
+              uses: actions/checkout@v2
+            - name: LOG EVENT
+              run: echo "An issue event has occurred. ${{fromJson(github.event.issue.user)}}"
